@@ -1,19 +1,18 @@
 //your JS code here. If required.
-let Output = document.getElemntById('output');
-let Input = document.getElemntById('ip');
+let Output = document.getElementById('output');
+let Input = document.getElementById('ip');
 
 const Submit = document.getElementById('btn');
 
-Submit.addEventListener("click", ValidateInput);
-
-// Consume Promises
-ValidateInput()
-.then(MultiplyWith2)
-.then(Subtract3)
-.then(DivideBy2)
-.then(Add10)
-.catch((err) => console.log(err.message));
-
+Submit.addEventListener("click", function () {
+	// consuming promises
+  ValidateInput()
+    .then(MultiplyWith2)
+    .then(Subtract3)
+    .then(DivideBy2)
+    .then(Add10)
+    .catch((err) => console.log(err.message));
+});
 
 // Create Promises
 function ValidateInput(){
@@ -53,7 +52,7 @@ function Subtract3(num){
 
 function DivideBy2(num){
 	return new Promise((resolve) => {
-		let divident = Math.floor(num/2);
+		let divident = num/2;
 		setTimeout(function(){
 			Output.innerText = `Result : ${divident}`
 			resolve(divident)
