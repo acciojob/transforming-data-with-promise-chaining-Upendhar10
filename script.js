@@ -23,7 +23,7 @@ function ValidateInput(){
 				const err = new Error("Invalid Input!");
 				reject(err);
 			}else{
-				Output.innerText = `Result : ${InputValue}`;
+				Output.innerText = `Result: ${InputValue}`;
 				resolve(InputValue);
 			}
 		}, 2000)
@@ -34,7 +34,7 @@ function MultiplyWith2(num){
 	return new Promise((resolve) => {
 		let product = num * 2;
 		setTimeout(function(){
-			Output.innerText = `Result : ${product}`
+			Output.innerText = `Result: ${product}`
 			resolve(product)
 		}, 1000)
 	})
@@ -44,7 +44,7 @@ function Subtract3(num){
 	return new Promise((resolve) => {
 		let difference = num - 3;
 		setTimeout(function(){
-			Output.innerText = `Result : ${difference}`
+			Output.innerText = `Result: ${difference}`
 			resolve(difference)
 		}, 1000)
 	})
@@ -54,7 +54,7 @@ function DivideBy2(num){
 	return new Promise((resolve) => {
 		let divident = num/2;
 		setTimeout(function(){
-			Output.innerText = `Result : ${divident}`
+			Output.innerText = `Result: ${divident}`
 			resolve(divident)
 		}, 1000)
 	})
@@ -64,7 +64,7 @@ function Add10(num){
 	return new Promise((resolve) => {
 		let add = num + 10;
 		setTimeout(function(){
-			Output.innerText = `Result : ${add}`
+			Output.innerText = `Final Result: ${add}`
 			resolve(add)
 		}, 1000)
 	})
